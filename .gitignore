@@ -1,0 +1,32 @@
+# Build output
+bin/
+obj/
+artifacts/
+[Dd]ebug/
+[Rr]elease/
+*.binlog
+
+# Test results and coverage
+TestResults/
+coverage.*
+*.coverage
+*.trx
+
+# IDE and tooling
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.agents/
+.opencode/
+
+# OS noise
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs and local settings
+*.log

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Blackout.Core/Blackout.Core.csproj" />
+  <Project Path="Blackout.Windows/Blackout.Windows.csproj" />
+</Solution>

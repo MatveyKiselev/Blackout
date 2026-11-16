@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!-- WinForms is a thin wrapper over Win32 common controls: no XAML, no WinUI, no MAUI. -->
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <UseWindowsForms>true</UseWindowsForms>
+        <RootNamespace>Blackout.Windows</RootNamespace>
+        <AssemblyName>Blackout</AssemblyName>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+        <ApplicationVisualStyles>true</ApplicationVisualStyles>
+        <ApplicationUseCompatibleTextRendering>false</ApplicationUseCompatibleTextRendering>
+        <ApplicationDefaultFont>Segoe UI, 9pt</ApplicationDefaultFont>
+        <ApplicationIcon>app.ico</ApplicationIcon>
+
+        <Version>0.1.0</Version>
+        <Product>Blackout</Product>
+        <Company>Blackout</Company>
+        <Description>Чёрный экран для OLED-панелей</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Blackout.Core\Blackout.Core.csproj" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+        <TieredPGO>true</TieredPGO>
+    </PropertyGroup>
+
+</Project>
